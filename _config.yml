@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Rajarshi Roychowdhury"
   avatar           : "https://xcitech.github.io/assets/images/profile.jpg"
-  bio              : "<i>Data Scientist, <br>PhD Candidate @ <br>UMass-Amherst</i>"
+  bio              : "<i>Data Scientist, \n PhD Candidate @ <br>&nbsp UMass-Amherst</i>"
   location         : "Amherst, MA"
   email            : "rajarshi.es@gmail.com"
   uri              :
