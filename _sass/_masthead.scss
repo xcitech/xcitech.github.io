@@ -24,8 +24,8 @@
 
 
     @include breakpoint($x-large) {
-      background-color: green; 
       max-width: $x-large;
+      background-color: green;       
    }
 
     nav {
