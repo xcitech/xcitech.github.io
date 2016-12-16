@@ -10,7 +10,7 @@ locale                   : "en"
 title                    : "Rajarshi Roychowdhury"
 title_separator          : "-"
 name                     : "Rajarshi Roychowdhury"
-description              : "Personal Blog."
+description              : "Personal Blog"
 url                      : "https://xcitech.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -79,7 +79,7 @@ analytics:
 author:
   name             : "Rajarshi Roychowdhury"
   avatar           : "https://xcitech.github.io/assets/images/profile.jpg"
-  bio              : "Data Scientist, PhD Candidate at UMass-Amherst"
+  bio              : "<i>Data Scientist, <p>PhD Candidate @ <p>UMass-Amherst</i>"
   location         : "Amherst, MA"
   email            : "rajarshi.es@gmail.com"
   uri              :
