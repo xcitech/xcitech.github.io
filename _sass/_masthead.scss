@@ -13,13 +13,12 @@
 
   &__inner-wrap {
     @include container;
-    @include clearfix;
     padding: 1em 1em 1em;
     font-family: "PT Sans Narrow", sans-serif;
     font-weight: 100;
     text-transform: uppercase;
-    font-size: 
 	border-bottom: 0.1em solid lightgrey;
+    @include clearfix;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
