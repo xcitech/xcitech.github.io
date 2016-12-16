@@ -19,9 +19,8 @@
     font-weight: 100;
     text-transform: uppercase;
 	border-bottom: 0.1em solid lightgrey;
-	background-color: blue;
     @include clearfix;
-
+	background-color: blue;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -30,22 +29,25 @@
 
     nav {
       z-index: 10;
+      background-color: #800000;
     }
 
     a {
       text-decoration: none;
+     background-color: pink;
     }
   }
 }
 
 .masthead__menu {
 
+  background-color: maroon;
   ul {
     margin: 0;
     padding: 0;
     clear: both;
-    background-color: yellow;
     list-style-type: none;
+    background-color: yellow;
   }
 }
 
