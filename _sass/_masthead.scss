@@ -19,6 +19,7 @@
     font-weight: 100;
     text-transform: uppercase;
 	border-bottom: 0.1em solid lightgrey;
+	background-color: blue;
     @include clearfix;
 
 
@@ -51,6 +52,7 @@
   display: block;
   list-style-type: none;
   white-space: nowrap;
+  background-color: red;
 
   &--lg {
     padding-right: 2em;
