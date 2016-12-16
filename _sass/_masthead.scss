@@ -21,9 +21,9 @@
     @include clearfix;
 
 
-//    @include breakpoint($x-large) {
-//      max-width: $x-large;
-//   }
+    @include breakpoint($x-large) {
+      max-width: $x-large;
+   }
 
     nav {
       z-index: 10;
