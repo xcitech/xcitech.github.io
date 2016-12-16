@@ -15,7 +15,6 @@
   &__inner-wrap {
     @include container;
     padding: 1em 1em 1em;
-    background-color: yellow;
     font-family: "PT Sans Narrow", sans-serif;
     font-weight: 100;
     text-transform: uppercase;
@@ -43,6 +42,7 @@
     margin: 0;
     padding: 0;
     clear: both;
+    background-color: yellow;
     list-style-type: none;
   }
 }
