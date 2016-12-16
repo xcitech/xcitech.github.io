@@ -15,9 +15,11 @@
     @include container;
     @include clearfix;
     padding: 1em 1em 1em;
-    font-family: $sans-serif-narrow;
-    font-weight: 50;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-weight: 100;
     text-transform: uppercase;
+    font-size: 
+	border-bottom: 0.1em solid lightgrey;
 
     @include breakpoint($x-large) {
       max-width: $x-large;
@@ -51,5 +53,19 @@
   &--lg {
     padding-right: 2em;
     font-weight: 200;
+    font-variant: small-caps;
+    font-size: 3em;
   }
+
+.masthead__site-name { 
+	display: inline; 
+	float: left; 
+	width: 83.33333%; 
+	margin-left: 8.33333%; 
+	margin-right: 8.33333%; 
+	margin-bottom: 1em; 
+	float: none; 
+	display: block; 
+	font-size: 24px; 
+	font-size: 1.5rem; }
 }
