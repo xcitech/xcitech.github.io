@@ -24,6 +24,7 @@
 
 
     @include breakpoint($x-large) {
+      background-color: green; 
       max-width: $x-large;
    }
 
@@ -58,8 +59,7 @@
     padding-right: 2em;
     font-weight: 200;
     font-variant: small-caps;
-    font-size: 3em;
-    background-color: green;    
+    font-size: 3em;   
   }
 
 .masthead__site-name { 
