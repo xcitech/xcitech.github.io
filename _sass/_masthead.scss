@@ -20,8 +20,9 @@
 	border-bottom: 0.1em solid lightgrey;
     @include clearfix;
 
-//    @include breakpoint($x-large) {
-//      max-width: $x-large;
+
+    @include breakpoint($x-large) {
+      max-width: $x-large;
     }
 
     nav {
