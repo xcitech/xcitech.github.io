@@ -87,6 +87,11 @@
   }
 }
 
+.bio_photo {
+		max-width: 110px;
+		@include rounded(150px);
+}
+
 .author__content {
   display: table-cell;
   vertical-align: top;
