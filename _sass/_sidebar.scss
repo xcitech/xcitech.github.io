@@ -88,8 +88,8 @@
 }
 
 .bio_photo {
-		max-width: 110px;
-		@include rounded(150px);
+	max-width: 110px;
+	border-radius: 150px;
 }
 
 .author__content {
