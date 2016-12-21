@@ -24,4 +24,11 @@ To remove the effect of weather from the historical flight delays, I needed the 
 
 Next, I downloaded hourly observational climate data from NOAA's [National Centers for Environmental Information (NCEI)](https://www.ncdc.noaa.gov) website. From the weather dataset, the local weather variables for the origin and the destination airport were appended to the main Airline Dataset for each and every flight.
 
+<script
+    src="https://xcitech.github.io/assets/images/heatmap.js"
+    id="2453a398-c49e-49b1-bdc8-9567f9775d83"
+    data-bokeh-model-id="81441c3b-7c12-47ff-99cb-572265e8dd06"
+    data-bokeh-doc-id="7253a980-51d8-4144-8ad4-41d6f745d0ef"
+></script>
+
 [top50]: https://xcitech.github.io/assets/images/top50.png "Top 50 Airports"
