@@ -26,9 +26,9 @@ Next, I downloaded hourly observational climate data from NOAA's [National Cente
 
 <script
     src="https://xcitech.github.io/assets/images/heatmap.js"
-    id="1bcd43e1-422d-4b80-b23d-c7a90195c1b8"
-    data-bokeh-model-id="091ea0d5-b6bf-42ad-ab58-82f249495ee6"
-    data-bokeh-doc-id="fb4d5672-d292-409b-a058-822982177d46"
+    id="54c6a8d0-8eda-4df8-bfe2-a827131e6bf1"
+    data-bokeh-model-id="f9c8fff2-14ec-4ef8-b948-771467a19e83"
+    data-bokeh-doc-id="1eb87fbd-42d6-49c5-970e-94c4236e0ae2"
 ></script>
 
 [top50]: https://xcitech.github.io/assets/images/top50.png "Top 50 Airports"
