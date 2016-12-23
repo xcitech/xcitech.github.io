@@ -310,7 +310,7 @@ nav {
    Global animation transition
    ========================================================================== */
 
-b, i {
+b, i, strong, em, blockquote, p, q, span {
   -webkit-transition: $global-transition;
   transition: $global-transition;
 }
