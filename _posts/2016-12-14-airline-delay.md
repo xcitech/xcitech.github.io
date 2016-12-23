@@ -16,9 +16,9 @@ Flight delays are nightmares for most people, be it the occassional flyer or the
 
 <script
     src="https://xcitech.github.io/assets/images/interact_barchart.js"
-    id="d70ebb70-6b92-42b6-ba91-1ad484cfd491"
-    data-bokeh-model-id="13c19943-3c01-4f26-872d-17f24f506c38"
-    data-bokeh-doc-id="0f6a53ec-88a1-4752-81f6-564dbe9acff5"
+    id="c3e5ced6-3749-4a75-b172-31e90516d2d8"
+    data-bokeh-model-id="8ffac920-b002-4638-870c-a0eab9c3b86d"
+    data-bokeh-doc-id="66c6a241-8967-471e-9567-5d431a1d268e"
 ></script>
 
 In this small project, I wish to demonstrate that some carriers are worse than others, when we discount the effect of weather from the historical delays. 
