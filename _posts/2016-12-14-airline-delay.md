@@ -14,6 +14,13 @@ tags:
 
 Flight delays are nightmares for most people, be it the occassional flyer or the regular commuter. While the largest reason for airline delays is undoubtedly local weather at the origin and the destination, there are many other reasons which lead to significant flight delays - such as Tarmac delays, Airport congestion delays, Carrier delays, Traffic delays, etc. While weather cannot be predicted in advance, other delay components can be predictable. 
 
+<script
+    src="https://xcitech.github.io/assets/images/interact_barchart.js"
+    id="d70ebb70-6b92-42b6-ba91-1ad484cfd491"
+    data-bokeh-model-id="13c19943-3c01-4f26-872d-17f24f506c38"
+    data-bokeh-doc-id="0f6a53ec-88a1-4752-81f6-564dbe9acff5"
+></script>
+
 In this small project, I wish to demonstrate that some carriers are worse than others, when we discount the effect of weather from the historical delays. 
 
 The data for this project was obtained from the website of the [Bureau of Transportation Statistics] (http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236). The data is made available in monthly files, and you can select the fields to download. I download 3 years of flight data, covering the period September 2013 to August 2016. The size of the total dataset was over 2.35 GB. Total rows in the dataset was 17 million.
