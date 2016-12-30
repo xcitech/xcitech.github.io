@@ -38,4 +38,13 @@ Next, I downloaded hourly observational climate data from NOAA's [National Cente
     data-bokeh-doc-id="1eb87fbd-42d6-49c5-970e-94c4236e0ae2"
 ></script>
 
+Weather Accounted Delay
+
+<script
+    src="https://xcitech.github.io/assets/images/interact_barchart2.js"
+    id="9e4c8634-1d8e-4786-a396-661105dea8cb"
+    data-bokeh-model-id="ce463129-74ff-45f8-a0cb-0a6cdd899ab3"
+    data-bokeh-doc-id="f0ff9bcb-d59a-4d2a-afbc-914a6d818cb0"
+></script>
+
 [top50]: https://xcitech.github.io/assets/images/top50.png "Top 50 Airports"
