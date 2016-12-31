@@ -25,9 +25,24 @@ In this small project, I wish to demonstrate that some carriers are worse than o
 
 The data for this project was obtained from the website of the [Bureau of Transportation Statistics] (http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236). The data is made available in monthly files, and you can select the fields to download. I download 3 years of flight data, covering the period September 2013 to August 2016. The size of the total dataset was over 2.35 GB. Total rows in the dataset was 17 million.
 
+![Flight Paths][bar_plot1]
+
 To remove the effect of weather from the historical flight delays, I needed the local weather at the origin and destination airports for every flight in the data. The first step in this was to load the data, clean it up and get the top 50 airports, sorted by combined arrival and departure traffic. 
 
 ![Top 50 Airports][top50]
+
+
+In this small project, I wish to demonstrate that some carriers are worse than others, when we discount the effect of weather from the historical delays. 
+
+![Flight Paths][bar_plot2]
+
+The data for this project was obtained from the website of the [Bureau of Transportation Statistics] (http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236). The data is made available in monthly files, and you can select the fields to download. I download 3 years of flight data, covering the period September 2013 to August 2016. The size of the total dataset was over 2.35 GB. Total rows in the dataset was 17 million.
+
+![Flight Paths][flight_paths]
+
+To remove the effect of weather from the historical flight delays, I needed the local weather at the origin and destination airports for every flight in the data. The first step in this was to load the data, clean it up and get the top 50 airports, sorted by combined arrival and departure traffic. 
+
+![Flight Paths][violin_plot]
 
 Next, I downloaded hourly observational climate data from NOAA's [National Centers for Environmental Information (NCEI)](https://www.ncdc.noaa.gov) website. From the weather dataset, the local weather variables for the origin and the destination airport were appended to the main Airline Dataset for each and every flight.
 
@@ -38,7 +53,13 @@ Next, I downloaded hourly observational climate data from NOAA's [National Cente
     data-bokeh-doc-id="1eb87fbd-42d6-49c5-970e-94c4236e0ae2"
 ></script>
 
-Weather Accounted Delay
+
+In this small project, I wish to demonstrate that some carriers are worse than others, when we discount the effect of weather from the historical delays. 
+
+The data for this project was obtained from the website of the [Bureau of Transportation Statistics] (http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236). The data is made available in monthly files, and you can select the fields to download. I download 3 years of flight data, covering the period September 2013 to August 2016. The size of the total dataset was over 2.35 GB. Total rows in the dataset was 17 million.
+
+To remove the effect of weather from the historical flight delays, I needed the local weather at the origin and destination airports for every flight in the data. The first step in this was to load the data, clean it up and get the top 50 airports, sorted by combined arrival and departure traffic. 
+
 
 <script
     src="https://xcitech.github.io/assets/images/interact_barchart2.js"
@@ -47,4 +68,21 @@ Weather Accounted Delay
     data-bokeh-doc-id="f0ff9bcb-d59a-4d2a-afbc-914a6d818cb0"
 ></script>
 
+In this small project, I wish to demonstrate that some carriers are worse than others, when we discount the effect of weather from the historical delays. 
+
+The data for this project was obtained from the website of the [Bureau of Transportation Statistics] (http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236). The data is made available in monthly files, and you can select the fields to download. I download 3 years of flight data, covering the period September 2013 to August 2016. The size of the total dataset was over 2.35 GB. Total rows in the dataset was 17 million.
+
+To remove the effect of weather from the historical flight delays, I needed the local weather at the origin and destination airports for every flight in the data. The first step in this was to load the data, clean it up and get the top 50 airports, sorted by combined arrival and departure traffic. 
+
+<script
+    src="https://xcitech.github.io/assets/images/heatmap2.js"
+    id="357c7544-a8ed-4237-8cc1-6955d759e491"
+    data-bokeh-model-id="ae001df7-adfa-4111-a45c-87993afa1419"
+    data-bokeh-doc-id="7b5845f1-43bf-4d3c-b0dc-02d0f2271ac4"
+></script>
+
 [top50]: https://xcitech.github.io/assets/images/top50.png "Top 50 Airports"
+[flight_paths]: https://xcitech.github.io/assets/images/flight_paths.png "Flight Paths"
+[bar_plot1]: https://xcitech.github.io/assets/images/delay_bar_plot1.png "Flight Paths"
+[bar_plot2]: https://xcitech.github.io/assets/images/delay_bar_plot2.png "Flight Paths"
+[violin_plot]: https://xcitech.github.io/assets/images/delay_violin_plot.png "Flight Paths"
