@@ -1,5 +1,7 @@
 ---
 title: "Predicting Airline Delays"
+header:
+  image: https://xcitech.github.io/assets/images/LA_header.jpg
 excerpt_separator: "<!--more-->"
 categories:
   - Projects
@@ -10,7 +12,7 @@ tags:
 ---
 
 
-Flight delays are among the biggest nightmares for travellers, be it the occassional flyer or the regular commuter. According to the Bureau of Transportation Statistics, there are about ~15,000 scheduled flights per day in the United States, with more than two million passengers boarding these flights every day! [(Source)] (http://www.nytimes.com/2013/02/12/business/2012-was-the-safest-year-for-airlines-globally-since-1945.html?pagewanted=all&_r=0) 
+Flight delays are among the biggest nightmares for travellers, be it the occassional flyer or the regular commuter. According to the Bureau of Transportation Statistics, there are about ~15,000 scheduled flights per day in the United States, with more than two million passengers boarding these flights every day! [(Source)](http://www.nytimes.com/2013/02/12/business/2012-was-the-safest-year-for-airlines-globally-since-1945.html?pagewanted=all&_r=0) 
 
 ![Los Angeles Airport][la]
 
