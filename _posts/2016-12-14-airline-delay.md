@@ -20,12 +20,13 @@ While majority of these flights land at or before their scheduled time, about 19
 
 I used a corpus of data from 17 million flights from September 2013 to August 2016 from the website of the [Bureau of Transportation Statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236). The data is made available in monthly files, with the option to select the fields for download. For this study, I focused on four things:
 
-* 1. Exploring historical arrival delays across different airlines, airports and time of the day, trying to get some insights on which airlines or airports are more prone to delays.
+1. Exploring historical arrival delays across different airlines, airports and time of the day, trying to get some insights on which airlines or airports are more prone to delays.
 
-* 2. Studying the effect of weather on airline delays. Given bad weather, does one airline perform better than the other?
+2. Studying the effect of weather on airline delays. Given bad weather, does one airline perform better than the other?
 
-* 3. Build a predictive model to forecast a flight delay
-* 4. Create a web application to quantify the difference in performance between various airlines in terms of arrival and departure delays, given the origin and destination airports. 
+3. Build a predictive model to forecast a flight delay
+
+4. Create a web application to quantify the difference in performance between various airlines in terms of arrival and departure delays, given the origin and destination airports. 
 
 The code for the analysis can be found [here](https://github.com/xcitech/airline-delay).
 
