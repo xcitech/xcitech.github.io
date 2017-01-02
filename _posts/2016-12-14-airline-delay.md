@@ -19,8 +19,11 @@ Flight delays are among the biggest nightmares for travellers, be it the occassi
 While majority of these flights land at or before their scheduled time, about 19% of all flights are delayed more than 15 minutes. That translates to an average of 2950 flights delayed more than 15 minutes every day! The largest reason for flight delays is undoubtedly local weather at the origin and the destination, besides many other reasons leading to significant delays - such as Tarmac delays, Airport congestion delays, Carrier delays, Traffic delays, etc. While weather cannot be predicted in advance, other delay components can be predictable. 
 
 I used a corpus of data from 17 million flights from September 2013 to August 2016 from the website of the [Bureau of Transportation Statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236). The data is made available in monthly files, with the option to select the fields for download. For this study, I focused on four things:
+
 * 1. Exploring historical arrival delays across different airlines, airports and time of the day, trying to get some insights on which airlines or airports are more prone to delays.
+
 * 2. Studying the effect of weather on airline delays. Given bad weather, does one airline perform better than the other?
+
 * 3. Build a predictive model to forecast a flight delay
 * 4. Create a web application to quantify the difference in performance between various airlines in terms of arrival and departure delays, given the origin and destination airports. 
 
@@ -114,7 +117,7 @@ To summarize, weather is the most important factor leading to flight delays. By 
 
 [busy_airport]: https://xcitech.github.io/assets/images/busy_airport.jpg "ATL_AIRPORT"
 [violin_plot]: https://xcitech.github.io/assets/images/delay_violin_plot.png "ARR_DELAY"
-[carrier__delay]: https://xcitech.github.io/assets/images/carrier_delay.png "CARRIER_DELAY"
+[carrier_delay]: https://xcitech.github.io/assets/images/carrier_delay.png "CARRIER_DELAY"
 [top50]: https://xcitech.github.io/assets/images/top50.png "TOP 50 AIRPORTS"
 [flight_paths]: https://xcitech.github.io/assets/images/flight_paths.png "Flight paths"
 [model]: https://xcitech.github.io/assets/images/model_explain.png "Model Explanation"
