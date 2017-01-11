@@ -186,7 +186,7 @@ Put the following HTML Template files in the /templates folder:
 <title>Airline-delay-Prediction App</title>
 <body>
 
-<h3> Delay Prediction: {{ prediction }} </h3>
+<h3> Delay Prediction: {{{{ prediction }}}} </h3>
 <p><h4> [0] = No Delay </h4></p>
 <p><h4> [1] = Delay of more than 5 minutes </h4></p>
 
@@ -199,7 +199,7 @@ Test your app by running the app.py file. If everything works, you should be abl
 
 ### Step 4: Deploy the app to Heroku
 
-For this part, you will need a [Heroku](www.heroku.com) account and the HerokuCLI. For our tutorial, we can use the free version of heroku. 
+For this part, you will need a [Heroku](https://www.heroku.com) account and the HerokuCLI. For our tutorial, we can use the free version of heroku. 
 
 * Create the Procfile: A Procfile is a mechanism for declaring what commands are run by your application’s dynos on the Heroku platform. Create a file called "Procfile" and put the following in it:
 
@@ -213,11 +213,12 @@ web: gunicorn app:app --log-file -
 $ pip freeze > requirements.txt
 ```
 
+
 * Set up HerokuCLI using the instructions [here](https://devcenter.heroku.com/articles/getting-started-with-python#set-up).
 
 * Create a new app on the Heroku Website by logging into your account.
 
-* Login to Heroku
+* Login to Heroku through the command prompt
 
 ```
 $ heroku login
