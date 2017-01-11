@@ -1,5 +1,5 @@
 ---
-title: "Create a ML based prediction webapp using Flask and Heroku"
+title: "Create a scikit-learn based prediction webapp using Flask and Heroku"
 excerpt_separator: "<!--more-->"
 categories:
   - Tutorials
@@ -187,9 +187,7 @@ Put the following HTML Template files in the /templates folder:
 <html>
 <title>Airline-delay-Prediction App</title>
 <body>
-{% raw %}
-<h3> Delay Prediction: {{ prediction }} </h3>
-{% endraw %}
+{% raw %}<h3> Delay Prediction: {{ prediction }} </h3>{% endraw %}
 <p><h4> [0] = No Delay </h4></p>
 <p><h4> [1] = Delay of more than 5 minutes </h4></p>
 
