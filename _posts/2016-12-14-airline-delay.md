@@ -60,21 +60,10 @@ Spirit Airlines is the worst performer, with 19% of its flights delayed more tha
 
 <script
     src="https://xcitech.github.io/assets/bokeh_js/heatmap1.js"
-    id="7e7ddf43-63b4-4b79-a06d-214aac9b7cca"
-    data-bokeh-model-id="efdbc2ca-c9c1-4014-895d-a6ed8f7f0346"
-    data-bokeh-doc-id="70a0312c-6e6d-48d2-9133-ef5dbc9c9f40"
+    id="c2630dce-04b3-4c53-a510-4667753d1f52"
+    data-bokeh-model-id="b4e30841-a61c-4501-87da-b6cf79237375"
+    data-bokeh-doc-id="b46ea07f-5c98-4797-9a2c-69a60b83ae38"
 ></script>
-
-
-
-<p>  </p><p>  </p><p>  </p><p>  </p><p>  </p><p>  </p><p>  </p>
-
-
-
-
-
-
-
 
 
 Early morning flights tend to have lower flight delays, and the average delay increase with hour of the day. Flights departing late evening tend to have the highest average delays, probably caused by the gradual accretion of delays through the day. Thursday evenings have the highest average delays (~20 minutes)
