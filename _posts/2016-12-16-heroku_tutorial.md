@@ -92,9 +92,9 @@ Pip install Flask and other prerequisites:
 pip install flask gunicorn
 ```
 
-#### Now we create the simple flask app. The flask app consists of 2 main components: the python app (app.py) and the HTML templates. While we can return HTML code from the python file itself, it would be cumbersome to code entire HTML as a string in the python file. [Templating](http://jinja.pocoo.org/docs/2.9/) come to the rescue! For a more extensive tutorial on using templates in flask, read an excellent tutorial [here](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates).
+Now we create the simple flask app. The flask app consists of 2 main components: the python app (app.py) and the HTML templates. While we can return HTML code from the python file itself, it would be cumbersome to code entire HTML as a string in the python file. [Templating](http://jinja.pocoo.org/docs/2.9/) come to the rescue! For a more extensive tutorial on using templates in flask, read an excellent tutorial [here](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates).
 
-So now we build the working Flask app to predict our flight delays. Create a app.py file and put the following code inside it:
+Create the app.py file and put the following code inside it:
 
 ```python
 from flask import Flask, request, render_template
@@ -154,7 +154,7 @@ Put the following HTML Template files in the /templates folder:
 
 ##### home.html
 
-```HTML
+```javascript
 <!DOCTYPE html>
 <html>
 <title>Airline-delay-Prediction App</title>
@@ -182,7 +182,7 @@ Put the following HTML Template files in the /templates folder:
 
 ##### result.html
 
-```HTML
+```
 <!DOCTYPE html>
 <html>
 <title>Airline-delay-Prediction App</title>
