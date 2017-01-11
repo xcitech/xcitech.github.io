@@ -187,8 +187,9 @@ Put the following HTML Template files in the /templates folder:
 <html>
 <title>Airline-delay-Prediction App</title>
 <body>
-
-<h3> Delay Prediction: }}{{ prediction }}}} </h3>
+{% raw %}
+<h3> Delay Prediction: {{ prediction }} </h3>
+{% endraw %}
 <p><h4> [0] = No Delay </h4></p>
 <p><h4> [1] = Delay of more than 5 minutes </h4></p>
 
@@ -245,7 +246,8 @@ $ git push heroku master
 
 Your app should be now live at your-app-name.herokuapp.com! Check out a working version of the app [here](https://airline-predict-heroku.herokuapp.com/). When you load your app for the first time (or after 15 minutes of inactivity), heroku takes about 30 seconds to load up your app on an active dyno. 
 
-
+### Final Words
+In this tutorial, we made a simple web based prediction app based on python ML libraries. To see the fully working version of the airline-delay project, check out [https://airline-scorecard.herokuapp.com/](https://airline-scorecard.herokuapp.com/). 
 
 
 
