@@ -153,7 +153,7 @@ Put the following HTML Template files in the /templates folder:
 
 ##### home.html
 
-```javascript
+```
 <!DOCTYPE html>
 <html>
 <title>Airline-delay-Prediction App</title>
@@ -178,7 +178,7 @@ Put the following HTML Template files in the /templates folder:
 </html>
 ```
 
-###### result.html
+##### result.html
 
 ```
 <!DOCTYPE html>
@@ -208,8 +208,9 @@ web: gunicorn app:app --log-file -
 ```
 
 * Create the python requirements file by running the following at the command prompt:
+
 ```
-pip freeze > requirements.txt
+$ pip freeze > requirements.txt
 ```
 
 * Set up HerokuCLI using the instructions [here](https://devcenter.heroku.com/articles/getting-started-with-python#set-up).
@@ -230,6 +231,7 @@ $ heroku git:remote -a airline-predict-heroku
 ```
 
 * Deploy your application
+
 ```
 $ git add .
 $ git commit -am "make it better"
