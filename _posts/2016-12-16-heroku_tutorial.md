@@ -20,9 +20,12 @@ Using combination of all of the above, we can create a simple web-based interfac
 
 ### Step 1: Create the Model in Python (and scikit-learn)
 Read the data in a Pandas DataFrame
+
 ```python
+
 import pandas as pd
 df = pd.read_csv('sample_data.csv')
+
 ```
 
 
