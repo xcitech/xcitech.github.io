@@ -1,5 +1,5 @@
 ---
-title: "Creating a Website to predict using a ML Model in Heroku"
+title: "Create a ML based prediction webapp using Flask and Heroku"
 excerpt_separator: "<!--more-->"
 categories:
   - Tutorials
@@ -12,11 +12,11 @@ tags:
 ---
 ## Introduction
 
-Recently, I dived into the huge airline dataset available with the Bureau of the Transportation Statistics. My goal was to create a web app to predict whether a flight is delayed or not. While this is not a trivial problem, given the inherent uncertainties of delays caused by weather, machine failure, airport delays, etc, I was able to create a decent model which gave reasonable predictions. Now I was faced with the daunting task of how to make a web app - which could be used by users to predict delays?
+Recently, I dived into the huge airline dataset available with the Bureau of the Transportation Statistics. My goal was to create a web app to predict whether a flight is delayed or not. While this is not a trivial problem, given the inherent uncertainties of delays caused by weather, machine failure, airport delays, etc, I was able to create a decent model which gave reasonable predictions. Now I was faced with the daunting task of making a web app which could be used by users to predict delays.
 
-## Python -> scikit-learn -> pickle -> flask -> Jinja2 -> Heroku
+## Python -> scikit-learn -> pickle model -> flask -> deploy on Heroku
 
-Using combination of all of the above, we can create a simple web-based interface to make predictions using Machine Learning libraries built in Python. 
+Using combination of all of above, we can create a simple web-based interface to make predictions using Machine Learning libraries built in Python. The code from this tutorial can be found on [Github](https://github.com/xcitech/ml-flask-tutorial).
 
 ### Step 1: Create the Model in Python using Scikit-learn
 Read the data in a Pandas DataFrame
@@ -244,10 +244,10 @@ $ git commit -am "make it better"
 $ git push heroku master
 ```
 
-Your app should be now live at your-app-name.herokuapp.com! Check out a working version of the app [here](https://airline-predict-heroku.herokuapp.com/). When you load your app for the first time (or after 15 minutes of inactivity), heroku takes about 30 seconds to load up your app on an active dyno. 
+Your app should be now live at your-app-name.herokuapp.com! Check out a working version of the app [here](https://airline-predict-heroku.herokuapp.com/).  The code from this tutorial can be found on [Github](https://github.com/xcitech/ml-flask-tutorial). When you load your app for the first time (or after 15 minutes of inactivity), heroku takes about 30 seconds to load up your app on an active dyno. 
 
 ### Final Words
-In this tutorial, we made a simple web based prediction app based on python ML libraries. To see the fully working version of the airline-delay project, check out [https://airline-scorecard.herokuapp.com/](https://airline-scorecard.herokuapp.com/). 
+In this tutorial, we made a simple web based prediction app based on python ML libraries. To see the fully working version of the airline-delay project, check out [https://airline-scorecard.herokuapp.com/](https://airline-scorecard.herokuapp.com/).
 
 
 
