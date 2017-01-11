@@ -86,10 +86,12 @@ Before starting with Flask, create and start a virtual environment (this is impo
 conda create -n flask_env python=2.7
 source activate flask_env
 ```
-Pip install Flask and other prerequisites:
+Pip install Flask and other prerequisites. (You will need to install all modules you plan to use in your Flask app, here we need numpy, sklearn additionally)
 
 ```
 pip install flask gunicorn
+pip instal numpy
+pip install sklearn
 ```
 
 Now we create the simple flask app. The flask app consists of 2 main components: the python app (app.py) and the HTML templates. While we can return HTML code from the python file itself, it would be cumbersome to code entire HTML as a string in the python file. [Templating](http://jinja.pocoo.org/docs/2.9/) come to the rescue! For a more extensive tutorial on using templates in flask, read an excellent tutorial [here](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-ii-templates).
@@ -186,7 +188,7 @@ Put the following HTML Template files in the /templates folder:
 <title>Airline-delay-Prediction App</title>
 <body>
 
-<h3> Delay Prediction: {{{{ prediction }}}} </h3>
+<h3> Delay Prediction: }}{{ prediction }}}} </h3>
 <p><h4> [0] = No Delay </h4></p>
 <p><h4> [1] = Delay of more than 5 minutes </h4></p>
 
@@ -218,6 +220,8 @@ $ pip freeze > requirements.txt
 
 * Create a new app on the Heroku Website by logging into your account.
 
+![heroku add][heroku]
+
 * Login to Heroku through the command prompt
 
 ```
@@ -238,3 +242,12 @@ $ git add .
 $ git commit -am "make it better"
 $ git push heroku master
 ```
+
+Your app should be now live at your-app-name.herokuapp.com! Check out a working version of the app [here](https://airline-predict-heroku.herokuapp.com/). When you load your app for the first time (or after 15 minutes of inactivity), heroku takes about 30 seconds to load up your app on an active dyno. 
+
+
+
+
+
+
+[heroku]: https://xcitech.github.io/assets/images/heroku.png "Heroku Add App"
