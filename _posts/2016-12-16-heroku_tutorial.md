@@ -146,7 +146,6 @@ def get_delay():
 
     
 if __name__ == '__main__':
-	app.debug = True
 	app.run()
 ```
 
@@ -177,10 +176,9 @@ Put the following HTML Template files in the /templates folder:
 </form>
 </body>
 </html>
-
 ```
 
-##### result.html
+###### result.html
 
 ```
 <!DOCTYPE html>
@@ -194,4 +192,46 @@ Put the following HTML Template files in the /templates folder:
 
 </body>
 </html>
+```
+
+Test your app by running the app.py file. If everything works, you should be able to run the app on your browser (usually at http://localhost:5000/). If everything works, proceed to the next step! 
+
+
+### Step 4: Deploy the app to Heroku
+
+For this part, you will need a [Heroku](www.heroku.com) account and the HerokuCLI. For our tutorial, we can use the free version of heroku. 
+
+* Create the Procfile: A Procfile is a mechanism for declaring what commands are run by your application’s dynos on the Heroku platform. Create a file called "Procfile" and put the following in it:
+
+```
+web: gunicorn app:app --log-file -
+```
+
+* Create the python requirements file by running the following at the command prompt:
+```
+pip freeze > requirements.txt
+```
+
+* Set up HerokuCLI using the instructions [here](https://devcenter.heroku.com/articles/getting-started-with-python#set-up).
+
+* Create a new app on the Heroku Website by logging into your account.
+
+* Login to Heroku
+
+```
+$ heroku login
+```
+
+* Go to your directory containing the flask app (app.py and /templates) and run the following command (Replace airline-predict-heroku with your-app-name)
+
+```
+$ git init
+$ heroku git:remote -a airline-predict-heroku
+```
+
+* Deploy your application
+```
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master
 ```
