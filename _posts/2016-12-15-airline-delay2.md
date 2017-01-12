@@ -21,9 +21,7 @@ So it all boils down to which airline you choose. So given a choice between Delt
 
 The chart plots the 16 airline carriers in the dataset, with Average Arrival Delay on the x-axis and percentage of flights delayed (>15 minutes) on the y-axis. So if you had to choose between Delta and American, Delta is definitely the better bet for an on-time arrival!
 
-## Use the Airline-Delay Predictor App 
-
-## [airline-scorecard.herokuapp.com)](https://airline-scorecard.herokuapp.com/)
+### The Airline-Delay Predictor App [airline-scorecard.herokuapp.com](https://airline-scorecard.herokuapp.com/)
 The numbers given above are averaged over all domestic flights in the US. These numbers will vary depending on particular routes. For example, airline A might perform better than airline B from New York to San Francisco, but airline B might perform better from Chicago to Atlanta. Using the web-app, you can choose your origin and destination airports, and quickly get the stats for all flights between the two specified airports in the last three years. 
 
 ![Screenshot 1][screen1]
@@ -34,6 +32,7 @@ The app gives a bunch of numbers, including the average departure and arrival de
 
 ![Screenshot 2][screen2]
 
+As they say, a journey of a thousand miles begins with one step. And, a delay-free flight begins with a little research :)
 
 ---
 [airline_performance]: https://xcitech.github.io/assets/images/airline_performance.png "Airline Performance"
