@@ -4,10 +4,11 @@ main:
   url: /about
 
 - title: All Posts
-  url: /posts
+  url: /
 
 - title: Photography
-  url: http://xcitech.github.io
+  url: /gallery
+  
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
