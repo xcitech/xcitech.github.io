@@ -11,14 +11,16 @@ tags:
   - python
 ---
 
+Flight delays are among the biggest nightmares for travellers. According to the Bureau of Transportation Statistics, there are about ~15,000 scheduled flights per day in the United States, with more than two million passengers flying every day! [(Source)](http://www.nytimes.com/2013/02/12/business/2012-was-the-safest-year-for-airlines-globally-since-1945.html?pagewanted=all&_r=0). While majority of scheduled flights land at or before their scheduled time, about 19% of all flights are delayed.
 
-Flight delays are among the biggest nightmares for travellers, be it the occassional flyer or the regular commuter. According to the Bureau of Transportation Statistics, there are about ~15,000 scheduled flights per day in the United States, with more than two million passengers flying every day! [(Source)](http://www.nytimes.com/2013/02/12/business/2012-was-the-safest-year-for-airlines-globally-since-1945.html?pagewanted=all&_r=0) 
+A delay is defined as any flight which arrives at the gate at least 15 minutes later than the scheduled arrival time. Data shows that an average of 2950 flights are delayed more than 15 minutes every day! Traditionally, the biggest causes for airline delays have been weather and bottlenecks in the Federal Aviation Administration's system, which includes factors like congested airports and other problems with the air-traffic system. However, according to a [Bloomberg report](![Atlanta Airport][busy_airport]), delays caused by Airline factors have exceeded delays caused by weather or the air-traffic system. These include late arrivals triggered by mechanical breakdowns, lack of flight crews and other factors attributed to the airlines companies. 
 
-![Atlanta Airport][busy_airport]
+In this project, I intend to use several years of flight data from the [Bureau of Transportation Statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236)
+to find out which airlines are the best and worst performers, and which airline performs the best given a particular route. 
 
-While majority of these flights land at or before their scheduled time, about 19% of all flights are delayed more than 15 minutes. That translates to an average of 2950 flights delayed more than 15 minutes every day! The largest reason for flight delays is undoubtedly local weather at the origin and the destination, besides many other reasons leading to significant delays - such as Tarmac delays, Airport congestion delays, Carrier delays, Traffic delays, etc. While weather cannot be predicted in advance, other delay components can be predictable. 
+![Atlanta Airport][busy_airport] 
 
-I used a corpus of data from 17 million flights from September 2013 to August 2016 from the website of the [Bureau of Transportation Statistics](http://www.transtats.bts.gov/DL_SelectFields.asp?Table_ID=236). The data is made available in monthly files, with the option to select the fields for download. For this study, I focused on four things:
+I used a corpus of data from 17 million flights from September 2013 to August 2016 from the website of the BTS. The data is made available in monthly files, with the option to select the fields for download. For this study, I focused on four things:
 
 1. Exploring historical arrival delays across different airlines, airports and time of the day, trying to get some insights on which airlines or airports are more prone to delays.
 2. Studying the effect of weather on airline delays. Given bad weather, does one airline perform better than the other?
@@ -30,13 +32,17 @@ The code for the analysis can be found [here](https://github.com/xcitech/airline
 
 ## Exploring Historical flight delays
 
-The best measure for on-time performance of a flight is ARR_DELAY, which is the difference in minutes between scheduled and actual arrival time. Early arrivals show negative numbers. I started by visualizing the ARR_DELAY for the top ten airlines sorted by the number of scheduled flights in our dataset.
+The best measure for on-time performance of a flight is the difference in minutes between scheduled and actual arrival time. The dataset contains this information in the ARR_DELAY feature, and early arrivals show negative numbers. I started by visualizing the arrival delays for the top ten airlines, sorted by the number of scheduled flights in our dataset.
 
 ![Flight Paths][violin_plot]
 
 > *ARR_DELAY for the top 10 Airlines (by number of flights)*
 
-It is observed that the median Arrival Delay lies between -10 and 0 for all the airlines, i.e. most flights arrive before time. The width of the plots at 30 denotes the frequency of flights arriving 30 minutes or more after the scheduled arrival time. However, if we consider only Arrival Delays (i.e. Early arrivals are considered as 0), the average delay lies between 5 and 15 minutes.  
+It is observed that the median Arrival Delay lies between -10 and 0 for all the airlines, i.e. most flights arrive before time. The width of the plots at 30 denotes the frequency of flights arriving 30 minutes or more after the scheduled arrival time. However, a better measure for quantifying the performance of airlines would not consider early arrivals as negative delays, since it brings down the mean arrival delays to near zero values. 
+
+## Which Airline should you choose?
+
+If we consider only late arrivals as Positive Arrival Delays (i.e. Early or on-time arrivals are considered as 0), the average delay lies between 5 and 15 minutes.  
 
 <script
     src="https://xcitech.github.io/assets/bokeh_js/interact_barchart_select.js"
@@ -45,16 +51,15 @@ It is observed that the median Arrival Delay lies between -10 and 0 for all the 
     data-bokeh-doc-id="05cacb08-3476-4ae1-8f9c-9ebe42f821e5"
 ></script>
 
-## Which Airline should you choose?
-As see above, most flights tend to arrive on or before time. But still, a big chunk of flights do get delayed by more than 30 minutes. Which airlines have the worst records of delays greater than 30 minutes?
+As see above, most flights tend to arrive on or before time. But still, a big chunk of flights do get delayed by more than 15 minutes. Which airlines have the worst records of delays greater than 15 minutes?
 
 ![Carrier Delays][carrier_delay]
 
-Spirit Airlines is the worst performer, with 19% of its flights delayed more than 30 minutes, followed by Frontier Airlines (16%) and Envoy Air (15%). Hawaiian Airlines and Alaska Airlines are the best performers, with only 3.4% and 6.3% of their flights delayed more than 30 minutes respectively.
+Spirit Airlines is the worst performer, with 28.8% of its flights delayed more than 15 minutes, followed by Frontier Airlines (25%) and Envoy Air (24%). Hawaiian Airlines and Alaska Airlines are the best performers, with only 8.8% and  12.5% of their flights delayed more than 15 minutes respectively.
 
 ![Flight Paths][flight_paths]
 
-> *Flight paths delayed more than 10 minutes on average. Darker lines represent greater average delays*
+> *Flight paths delayed more than 15 minutes on average. Darker lines represent greater average delays*
 
 ## What time of the day are you most likely to be delayed?
 
@@ -108,7 +113,7 @@ Finally, we use our model to predict ARR_DELAY with mean weather of the Origin a
 
 Some airlines tend to perform better when we discount the effect of weather. For example, Expressjet has a higher average delay than JetBlue - however, when we discount the effect of weather from arrival delays, JetBlue has a higher average arrival delay. For Delta Airlines, average arrival delays are significantly reduced when the effect of weather is removed. 
 
-To summarize, weather is the most important factor leading to flight delays. By removing the effect of weather, we can provide a level playing ground to compare two airlines head-on on their on-time performances. There is much more to explore with this dataset, factoring in passenger load, airport load, routes, etc... just waiting to be analyzed. In the next part, I will develop a scoring mechanism to rate and compare the performances of all airlines operating on an user-defined route (Origin-Destination airport pair).
+To summarize, weather is a big factor leading to flight delays. By offsetting the effect of weather, we can provide a level playing ground to compare two airlines head-on. There is much more to explore with this dataset, factoring in passenger load, airport load, routes, etc... just waiting to be analyzed. In the next part, I will compare performances of all airlines operating on an user-defined specific routes (Origin-Destination airport pair).
 
 ---
 
@@ -117,4 +122,5 @@ To summarize, weather is the most important factor leading to flight delays. By 
 [carrier_delay]: https://xcitech.github.io/assets/images/carrier_delay.png "CARRIER_DELAY"
 [top50]: https://xcitech.github.io/assets/images/top50.png "TOP 50 AIRPORTS"
 [flight_paths]: https://xcitech.github.io/assets/images/flight_paths.png "Flight paths"
+[airline_performance]: https://xcitech.github.io/assets/images/airline_performance.png "Airline Performance"
 [model]: https://xcitech.github.io/assets/images/model_explain.png "Model Explanation"
