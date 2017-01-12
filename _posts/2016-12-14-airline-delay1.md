@@ -32,7 +32,7 @@ The code for the analysis can be found [here](https://github.com/xcitech/airline
 
 ## Exploring Historical flight delays
 
-The best measure for on-time performance of a flight is the difference in minutes between scheduled and actual arrival time. The dataset contains this information in the ARR_DELAY feature, and early arrivals show negative numbers. I started by visualizing the arrival delays for the top ten airlines, sorted by the number of scheduled flights in our dataset.
+A good measure for on-time performance of a flight is the difference in minutes between scheduled and actual arrival time. The dataset contains this information in the ARR_DELAY feature, and early arrivals show negative numbers. I started by visualizing the arrival delays for the top ten airlines, sorted by the number of scheduled flights in our dataset.
 
 ![Flight Paths][violin_plot]
 
