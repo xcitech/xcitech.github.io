@@ -117,7 +117,8 @@ To summarize, weather is a big factor leading to flight delays. By offsetting th
 
 
 #### [Part 2](https://xcitech.github.io/projects/airline-delay2/)
-#### Update: The final airline-delay webapp is hosted here -  [airline-scorecard.herokuapp.com)](https://airline-scorecard.herokuapp.com/)
+
+#### Update: The final airline-delay webapp is hosted here -  [airline-scorecard.herokuapp.com](https://airline-scorecard.herokuapp.com/)
 
 ---
 
