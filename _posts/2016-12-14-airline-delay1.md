@@ -115,6 +115,10 @@ Some airlines tend to perform better when we discount the effect of weather. For
 
 To summarize, weather is a big factor leading to flight delays. By offsetting the effect of weather, we can provide a level playing ground to compare two airlines head-on. There is much more to explore with this dataset, factoring in passenger load, airport load, routes, etc... just waiting to be analyzed. In the next part, I will compare performances of all airlines operating on an user-defined specific routes (Origin-Destination airport pair).
 
+
+#### [Part 2](https://xcitech.github.io/projects/airline-delay2/)
+#### Update: The final airline-delay webapp is hosted here -  [airline-scorecard.herokuapp.com)](https://airline-scorecard.herokuapp.com/)
+
 ---
 
 [busy_airport]: https://xcitech.github.io/assets/images/busy_airport.jpg "ATL_AIRPORT"
