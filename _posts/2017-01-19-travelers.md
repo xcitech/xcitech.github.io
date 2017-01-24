@@ -14,14 +14,21 @@ tags:
 
 In this blog post, we explore the solution to a Case competition organized by Travelers Insurance Company.
 
+> Business problem
 
-```
+> You work for Kangaroo Auto Insurance Company, an Australian company.  Your business partner, who is not familiar with statistics at all, would like you to create a rating plan based on the historical auto claim data.  Your business partner is concerned about segmentation as well as competitiveness, as there are several other competitors in the market.
+
+> For this case competition, your group’s task is to provide a method for predicting the claim cost for each policy and to convince your business partner that your predictions will work well.
+
+~~~~
 Business problem
 
 You work for Kangaroo Auto Insurance Company, an Australian company.  Your business partner, who is not familiar with statistics at all, would like you to create a rating plan based on the historical auto claim data.  Your business partner is concerned about segmentation as well as competitiveness, as there are several other competitors in the market.
 
 For this case competition, your group’s task is to provide a method for predicting the claim cost for each policy and to convince your business partner that your predictions will work well.
-```
+~~~~
+
+test 
 
 ## Data Description
 
