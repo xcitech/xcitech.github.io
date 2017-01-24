@@ -22,10 +22,11 @@ In this blog post, we explore the solution to a Case competition organized by Tr
 
 ## Data Description
 
-The Kangaroo data set is based on one-year vehicle insurance policies from 2004 to 2005. The data is split into two parts: training and validation set. The actual competition had a third set (holdout set) on which teams were scored. 
+The Kangaroo data set is based on one-year vehicle insurance policies from 2004 to 2005. The data is split into two parts: training and validation set. The actual competition had a third set (hold set) on which teams were scored. 
 
 ![Dataframe Head][data]
 
+<sub>
 Variable information in the data:
 
 * ID: policy key
@@ -39,6 +40,24 @@ Variable information in the data:
 * Claim_ind: Indicator of claim (0=no, 1=yes)
 * Claim_counts: The number of claims
 * Claim_cost: Claim amount
+</sub>
+
+## What is the actual end goal?
+
+Auto Insurances must be priced to reflect the provider's risk exposure. Thus, the pricing of an insurance policy depends on the underlying risk exposure of the insured. In this example, we are calculating 'Pure Premium', which is the average loss per exposure. PP = Frequency * Severity = loss $ / exposure. This is what a company would charge for a policy if not accounting for expenses and profit.
+
+The model results are not evaluated on accuracy, but on the [Gini index](https://en.wikipedia.org/wiki/Gini_coefficient).
+
+## Approaching the problem
+After some basic EDA, it was observed that the data was highly skewed. Less than 7% of the data points had any claims, and the vast majority of our data had no claims. It was further observed that less than .4% of the data had greater than a single claim. So, we converted the numeric claim_count variable into a binary feature (0=no claim, 1=claim).
+
+```python
+df['claim_count'] = df['claim_count'].apply(lambda x:1 if x>0 else 0)
+```
+
+
+![Plot of Claim vs No-claim][plot1]
 
 
 [data]: https://xcitech.github.io/assets/images/insurance_data.png "Head of the Data"
+[plot1]: https://xcitech.github.io/assets/images/insurance/plot1.png "Plot 1"
