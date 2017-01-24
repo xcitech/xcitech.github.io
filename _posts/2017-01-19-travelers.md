@@ -26,12 +26,11 @@ The Kangaroo data set is based on one-year vehicle insurance policies from 2004 
 
 ![Dataframe Head][data]
 
-<sub>
 Variable information in the data:
 
-* <sub> ID: policy key
-* <sub> Veh_value: market value of the vehicle in $10,000’s
-* <sub> Veh_body: Type of vehicles
+* ID: policy key
+* Veh_value: market value of the vehicle in $10,000’s
+* Veh_body: Type of vehicles
 * Veh_age: Age of vehicles (1=youngest, 4=oldest)
 * Gender: Gender of driver
 * Area: Driving area of residence
@@ -40,7 +39,6 @@ Variable information in the data:
 * Claim_ind: Indicator of claim (0=no, 1=yes)
 * Claim_counts: The number of claims
 * Claim_cost: Claim amount
-</sub>
 
 ## What is the actual end goal?
 
@@ -121,7 +119,8 @@ Finally, we use manual heuristic factors that we’ve chosen for maximum differe
 We created a parallel GLM based model to predict claim costs. We used a simple model ensembling technique to combine predictions from both ML based and GLM based models to generate our final predictions. The model stacking was primarily done to reduce variance and introduce better generalizability in our final model. The stacked model outperforms each of the individual models due to its low variance and ability to highlight each model where it performs better.
 
 ![Performance comparison of two models on 10 cross-validation sets][model_compare]
-Performance comparison of the two models on 10 cross-validation sets
+
+##### Performance comparison of the two models on 10 cross-validation sets
 
 [Github repo of the code](https://github.com/xcitech/insurance_ML_model).
 
