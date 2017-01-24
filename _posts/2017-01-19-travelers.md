@@ -29,9 +29,9 @@ The Kangaroo data set is based on one-year vehicle insurance policies from 2004 
 <sub>
 Variable information in the data:
 
-* ID: policy key
-* Veh_value: market value of the vehicle in $10,000’s
-* Veh_body: Type of vehicles
+* <sub> ID: policy key
+* <sub> Veh_value: market value of the vehicle in $10,000’s
+* <sub> Veh_body: Type of vehicles
 * Veh_age: Age of vehicles (1=youngest, 4=oldest)
 * Gender: Gender of driver
 * Area: Driving area of residence
