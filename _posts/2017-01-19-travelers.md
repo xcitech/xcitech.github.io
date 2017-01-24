@@ -12,7 +12,7 @@ tags:
 ---
 ## Introduction
 
-In this blog post, we explore the solution to a Case competition organized by Travelers Insurance Company.
+The Kangaroo Insurance Case competition organized by Travelers Insurance asked the Data Science community at UMass and UConn to predict claim costs for auto insurance policies. The 50+ teams were given an anonymized dataset with about 20k training samples. The challenge was to get predictions with the highest gini coefficient on the hold set. Our team consisting of Rajarshi Roychowdhury, Aruni Roychowdhury and Neil Patel ranked second (2nd) in a head-to-head race at the end with a final gini coefficient of 0.229
 
 ### Business problem
 
@@ -122,6 +122,8 @@ We created a parallel GLM based model to predict claim costs. We used a simple m
 
 ![Performance comparison of two models on 10 cross-validation sets][model_compare]
 Performance comparison of the two models on 10 cross-validation sets
+
+[Github repo of the code](https://github.com/xcitech/insurance_ML_model).
 
 [data]: https://xcitech.github.io/assets/images/insurance_data.png "Head of the Data"
 [plot1]: https://xcitech.github.io/assets/images/insurance/plot1.png "Plot 1"
