@@ -12,7 +12,7 @@ tags:
 ---
 ## Introduction
 
-The Kangaroo Insurance Case competition organized by Travelers Insurance asked the Data Science community at UMass and UConn to predict claim costs for auto insurance policies. The 50+ teams were given an anonymized dataset with about 20k training samples. The challenge was to get predictions with the highest gini coefficient on the hold set. Our team consisting of Rajarshi Roychowdhury, Aruni Roychowdhury and Neil Patel ranked second (2nd) in a head-to-head race at the end with a final gini coefficient of 0.229
+The Kangaroo Insurance Case competition organized by Travelers Insurance asked the Data Science community at UMass and UConn to predict claim costs for auto insurance policies. The 50+ teams were given an anonymized dataset with about 20k training samples. The challenge was to get predictions with the highest gini coefficient on the hold set. Our team consisting of [Rajarshi Roychowdhury](https://xcitech.github.io/), [Aruni Roychowdhury](http://people.cs.umass.edu/~arunirc/) and Neil Patel ranked second (2nd) in a head-to-head race at the end with a final gini coefficient of 0.229
 
 ### Business problem
 
