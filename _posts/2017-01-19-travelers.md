@@ -55,9 +55,69 @@ After some basic EDA, it was observed that the data was highly skewed. Less than
 df['claim_count'] = df['claim_count'].apply(lambda x:1 if x>0 else 0)
 ```
 
-
 ![Plot of Claim vs No-claim][plot1]
 
+#### 1. Predict Claim Probability using Logistic Regression
+
+First, we train a Logistic Regression model to calculate the probabilities of having a claim on the test set. Since the number of negative labeled values far exceed the positive labeled values, we use bagging, i.e. create bootstrap samples of the data with equal number of positive and negative classes. We create 1000 such samples, train a logistic regression model on each of them, and finally use majority voting on the resulting ensemble of classifiers.  
+
+```python
+from sklearn.linear_model import LogisticRegression
+logmodel = LogisticRegression(C=1000, class_weight='balanced')
+
+n=10 #Number of models to run
+for i in range (0,n):
+    X_train_neg = X_train.loc[np.random.choice(df[df['claim_count']==0].index, 3000, replace = False)]
+    X_train_pos = X_train.loc[np.random.choice(df[df['claim_count']==1].index, 3000, replace = True)] 
+    X_train = pd.concat([X_train_pos,X_train_neg], ignore_index=True)
+
+    y_train = X_train['claim_count']
+    X_train.drop('claim_count', axis=1,inplace=True)
+
+    #Fit the Logistic Regression Model
+    logmodel.fit(X_train,y_train)
+    y_test['pred'] = y_test['pred'] + logmodel.predict(X_test)
+
+#Take Vote    
+y_test['pred'] = y_test['pred'].apply(lambda x:1 if x>=5 else 0)
+    
+from sklearn.metrics import classification_report
+print(classification_report(y_test['claim_count'],y_test['pred']))
+```
+
+Using the trained Logistic Regression model, we calculate z =(P(claim)/P(no-claim))**r. The exponent r controls the "inequality". Thus higher values (>1) get higher, lower values (<1) get lowered. 
+
+#### 2. Predict Claim Value using Gradient Boosted Trees (XGBoost)
+To predict claim values, we trained on rows which had at least 1 claim. XGBoost dominates structured or tabular datasets on classification and regression predictive modeling problems, and is becoming the tool of choice for such problems. 
+
+```python
+X_train_regress = df[df['claim_count']>0].copy()
+y_train_regress = np.log(df[df['claim_count']>0]['claim_cost'])
+
+#Implement XGBoost for regression
+import xgboost as xgb
+num_round = 10
+
+T_train_xgb = xgb.DMatrix(X_train_regress, y_train_regress)
+params = {"objective": "reg:linear"}
+gbm = xgb.train(dtrain=T_train_xgb,params=params)
+predictions = gbm.predict(xgb.DMatrix(X_test))
+predicted_claim_cost=[np.exp(p) for p in predictions]
+```
+Final claim cost = z * predicted_claim_cost
+
+#### 3. Heuristic factors to boost inequality
+
+Finally, we use manual heuristic factors that we’ve chosen for maximum differentiating ability to increase the inequality in our predicted claim costs. Remember, we are not striving for accuracy, but rather aiming for higher gini coefficient.
+
+> Example of Factor Calculation for Area = ‘A’:
+>	In Area ‘A’, say there are 2 claims for 10 non-claims (2/10).
+>	In all other Areas, say there is 1 claim for 20 non-claims (1/20).
+>	Then factor(Area:‘A’) = (2/10)/(1/20) = 4
+>>  “If you stay in Area A, your claim cost gets bumped up by a factor of 4”
 
 [data]: https://xcitech.github.io/assets/images/insurance_data.png "Head of the Data"
 [plot1]: https://xcitech.github.io/assets/images/insurance/plot1.png "Plot 1"
+[plot2]: https://xcitech.github.io/assets/images/insurance/plot2.png "Plot 2"
+[plot3]: https://xcitech.github.io/assets/images/insurance/plot3.png "Plot 3"
+[plot4]: https://xcitech.github.io/assets/images/insurance/plot4.png "Plot 4"
