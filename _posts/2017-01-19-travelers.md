@@ -110,14 +110,19 @@ Final claim cost = z * predicted_claim_cost
 
 Finally, we use manual heuristic factors that we’ve chosen for maximum differentiating ability to increase the inequality in our predicted claim costs. Remember, we are not striving for accuracy, but rather aiming for higher gini coefficient.
 
-> Example of Factor Calculation for Area = ‘A’:
->	In Area ‘A’, say there are 2 claims for 10 non-claims (2/10).
->	In all other Areas, say there is 1 claim for 20 non-claims (1/20).
->	Then factor(Area:‘A’) = (2/10)/(1/20) = 4
->>  “If you stay in Area A, your claim cost gets bumped up by a factor of 4”
+> Example of Factor Calculation for Area = ‘A’:  
+>	In Area ‘A’, say there are 2 claims for 10 non-claims (2/10).  
+>	In all other Areas, say there is 1 claim for 20 non-claims (1/20).  
+>	Then factor(Area:‘A’) = (2/10)/(1/20) = 4  
+> >  “If you stay in Area A, your claim cost gets bumped up by a factor of 4”
+
+#### 4. Combining with a GLM based model
+
+We created a parallel GLM based model to predict claim costs. We used a simple model ensembling technique to combine predictions from both ML based and GLM based models to generate our final predictions. The model stacking was primarily done to reduce variance and introduce better generalizability in our final model. The stacked model outperforms each of the individual models due to its low variance and ability to highlight each model where it performs better.
+
+![Performance comparison of two models on 10 cross-validation sets][model_compare]
+Performance comparison of the two models on 10 cross-validation sets
 
 [data]: https://xcitech.github.io/assets/images/insurance_data.png "Head of the Data"
 [plot1]: https://xcitech.github.io/assets/images/insurance/plot1.png "Plot 1"
-[plot2]: https://xcitech.github.io/assets/images/insurance/plot2.png "Plot 2"
-[plot3]: https://xcitech.github.io/assets/images/insurance/plot3.png "Plot 3"
-[plot4]: https://xcitech.github.io/assets/images/insurance/plot4.png "Plot 4"
+[model_compare]: https://xcitech.github.io/assets/images/insurance/model_compare.png "Plot 4"
