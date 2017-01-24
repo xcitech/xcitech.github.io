@@ -6,9 +6,9 @@ categories:
 tags:
   - python
   - machine learning
-  - insurance
-  - 
-  - jinja2
+  - insurance modeling
+  - model stacking
+
 ---
 ## Introduction
 
